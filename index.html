@@ -1,109 +1,89 @@
-import React from 'react';
-
-type AnalysisBlockProps = {
-  title: string;
-  description: string;
-};
-
-const AnalysisBlock: React.FC<AnalysisBlockProps> = ({ title, description }) => (
-  <section className="flex flex-col justify-center mt-14 text-white bg-purple-800 shadow-sm max-md:mt-10 max-md:max-w-full">
-    <div className="flex flex-col items-start pt-11 pr-20 pb-20 pl-9 bg-purple-800 shadow-sm max-md:px-5 max-md:max-w-full">
-      <h2 className="text-5xl font-bold tracking-tighter leading-10 text-center max-md:max-w-full">{title}</h2>
-      <p className="mt-6 text-4xl italic font-light tracking-tighter leading-10 max-md:max-w-full">{description}</p>
+<main class="flex flex-col pt-3.5 pb-16 bg-white">
+  <header class="flex gap-5 justify-between self-center w-full text-5xl leading-7 text-purple-900 whitespace-nowrap max-w-[1418px] max-md:flex-wrap max-md:max-w-full max-md:text-4xl">
+    <div class="flex gap-0 px-5 max-md:text-4xl">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/54fff1c91088bb31e3bf7930791cfe413d1482321d14342b2667d9cb93e0fc39?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="Voxia logo" class="shrink-0 max-w-full aspect-[0.97] w-[126px]" />
+      <h1 class="flex-auto self-start mt-14 max-md:mt-10 max-md:text-4xl">Voxia</h1>
     </div>
-  </section>
-);
-
-type InputBlockProps = {
-  title: string;
-  placeholder: string;
-};
-
-const InputBlock: React.FC<InputBlockProps> = ({ title, placeholder }) => (
-  <section className="mt-44 max-md:mt-10 max-md:max-w-full">
-    <h2 className="text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:max-w-full">{title}</h2>
-    <div className="mt-7 max-md:max-w-full">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-        <div className="flex flex-col w-[73%] max-md:ml-0 max-md:w-full">
-          <div className="grow pt-7 pb-20 w-full text-4xl italic font-light tracking-tighter leading-10 text-white rounded-3xl border-black border-solid bg-zinc-300 border-[5px] max-md:mt-10 max-md:max-w-full">
-            {placeholder}
-          </div>
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7cf103bab74e9b1f74668c4ad045c90ff83ae6ee8f4cf2bc38a7b91ef0b9ffa?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="Decorative icon" class="shrink-0 my-auto max-w-full aspect-square w-[100px]" />
+  </header>
+  <section class="flex flex-col px-20 mt-40 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
+    <p class="self-center text-4xl italic font-light tracking-tighter leading-10 text-center text-black text-opacity-60 max-md:max-w-full">
+      Welcome to Voxia, where innovation meets sustainability. Enter your project details now and let our advanced analysis tools calculate its sustainability score. Find out if your solution is truly sustainable and make informed decisions that shape a greener future. Join us in creating impactful change: start analyzing your project today!
+    </p>
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/275b4a46610361c4172e5e0f53b8849372c46d914dfff1802808166a43db34d8?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="Decorative element" class="self-center mt-20 max-w-full aspect-[4.17] w-[493px] max-md:mt-10" />
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea8c00007e5b13d8cddb613ed10c9371a184410b053b6dbc436130ad5e5d5ef8?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="Decorative element" class="self-center mt-20 w-full aspect-[6.25] fill-black fill-opacity-60 max-w-[1094px] max-md:mt-10 max-md:max-w-full" />
+    <h2 class="mt-44 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">Discuss about your project idea :</h2>
+    <form class="mt-7 max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+        <div class="flex flex-col w-[73%] max-md:ml-0 max-md:w-full">
+          <label for="projectIdea" class="sr-only">Enter project idea here</label>
+          <textarea id="projectIdea" class="grow pt-7 pb-20 w-full text-4xl italic font-light tracking-tighter leading-10 text-white rounded-3xl border-black border-solid bg-zinc-300 border-[5px] max-md:mt-10 max-md:max-w-full" placeholder="Enter project idea here :"></textarea>
         </div>
-        <div className="flex flex-col ml-5 w-[27%] max-md:ml-0 max-md:w-full">
-          <button className="flex flex-col justify-center self-stretch p-1.5 my-auto text-4xl leading-10 text-purple-900 whitespace-nowrap border-purple-900 border-solid border-[5px] rounded-[100px] max-md:mt-10">
-            <div className="justify-center items-center px-16 py-14 bg-gray-300 rounded-[100px] max-md:px-5">ANALYSE</div>
+        <div class="flex flex-col ml-5 w-[27%] max-md:ml-0 max-md:w-full">
+          <button type="submit" class="flex flex-col justify-center self-stretch p-1.5 my-auto text-4xl leading-10 text-purple-900 whitespace-nowrap border-purple-900 border-solid border-[5px] rounded-[100px] max-md:mt-10">
+            <span class="justify-center items-center px-16 py-14 bg-gray-300 rounded-[100px] max-md:px-5">ANALYSE</span>
           </button>
         </div>
       </div>
-    </div>
-    <h3 className="mt-14 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">Analysis :</h3>
-    <p className="self-start mt-12 ml-4 text-4xl italic font-light tracking-tighter leading-10 text-purple-800 max-md:mt-10 max-md:ml-2.5">_</p>
-  </section>
-);
-
-const MyComponent: React.FC = () => {
-  return (
-    <main className="flex flex-col pt-3.5 pb-16 bg-white">
-      <header className="flex gap-5 justify-between self-center w-full text-5xl leading-7 text-purple-900 whitespace-nowrap max-w-[1418px] max-md:flex-wrap max-md:max-w-full max-md:text-4xl">
-        <div className="flex gap-0 px-5 max-md:text-4xl">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/54fff1c91088bb31e3bf7930791cfe413d1482321d14342b2667d9cb93e0fc39?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="" className="shrink-0 max-w-full aspect-[0.97] w-[126px]" />
-          <h1 className="flex-auto self-start mt-14 max-md:mt-10 max-md:text-4xl">Voxia</h1>
+    </form>
+    <h3 class="mt-14 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">Analysis :</h3>
+    <p class="self-start mt-12 ml-4 text-4xl italic font-light tracking-tighter leading-10 text-purple-800 max-md:mt-10 max-md:ml-2.5">_</p>
+    <h2 class="mt-80 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">Discuss about your material choice :</h2>
+    <form class="self-center mt-8 w-full max-w-[1270px] max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+        <div class="flex flex-col w-[78%] max-md:ml-0 max-md:w-full">
+          <label for="materialDetails" class="sr-only">Enter material details here</label>
+          <textarea id="materialDetails" class="grow pt-7 pb-20 w-full text-4xl italic font-light tracking-tighter leading-10 text-white rounded-3xl border-black border-solid bg-zinc-300 border-[5px] max-md:mt-10 max-md:max-w-full" placeholder="Enter material details here :"></textarea>
         </div>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7cf103bab74e9b1f74668c4ad045c90ff83ae6ee8f4cf2bc38a7b91ef0b9ffa?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="" className="shrink-0 my-auto max-w-full aspect-square w-[100px]" />
-      </header>
-      
-      <section className="flex flex-col px-20 mt-40 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
-        <p className="self-center text-4xl italic font-light tracking-tighter leading-10 text-center text-black text-opacity-60 max-md:max-w-full">
-          Welcome to Voxia, where innovation meets sustainability. Enter your project details now and let our advanced analysis tools calculate its sustainability score. Find out if your solution is truly sustainable and make informed decisions that shape a greener future. Join us in creating impactful change: start analyzing your project today!
-        </p>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/275b4a46610361c4172e5e0f53b8849372c46d914dfff1802808166a43db34d8?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="" className="self-center mt-20 max-w-full aspect-[4.17] w-[493px] max-md:mt-10" />
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea8c00007e5b13d8cddb613ed10c9371a184410b053b6dbc436130ad5e5d5ef8?apiKey=eae14c1b9f0a4bbba47f67d52754a286&" alt="" className="self-center mt-20 w-full aspect-[6.25] fill-black fill-opacity-60 max-w-[1094px] max-md:mt-10 max-md:max-w-full" />
-        
-        <InputBlock title="Discuss about your project idea :" placeholder="Enter project idea here :" />
-        
-        <InputBlock title="Discuss about your material choice :" placeholder="Enter material details here :" />
-        
-        <h2 className="mt-72 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">PROJECT MANAGEMENT :</h2>
-        
-        <AnalysisBlock 
-          title="Project Idea Evaluation :"
-          description="Submit your project idea for a sustainability evaluation and receive tailored suggestions to enhance its value and efficiency."
-        />
-        
-        <AnalysisBlock 
-          title="Material Evaluation :"
-          description="Input the materials intended for your project to analyze their environmental impacts and receive optimized suggestions for improving material choices."
-        />
-        
-        <button className="flex flex-col justify-center self-center p-1.5 mt-20 max-w-full text-4xl leading-10 text-purple-900 whitespace-nowrap border-purple-900 border-solid border-[5px] rounded-[100px] w-[363px] max-md:mt-10">
-          <div className="justify-center px-14 py-10 bg-gray-300 rounded-[100px] max-md:pr-6 max-md:pl-5">SUMMARIZE</div>
-        </button>
-        
-        <h2 className="self-center mt-32 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">YOUR PROJECT SUMMARY</h2>
-      </section>
-      
-      <section className="flex flex-col self-start mt-28 ml-14 text-5xl font-bold tracking-tighter leading-10 text-purple-900 max-md:mt-10 max-md:max-w-full">
-        <h3 className="text-center max-md:max-w-full">FINALIZED IDEA :</h3>
-        <p className="mt-16 text-purple-900 max-md:mt-10 max-md:max-w-full">_</p>
-        <h3 className="mt-80 text-center max-md:mt-10 max-md:max-w-full">FINALIZED MATERIALS :</h3>
-        <p className="mt-16 text-black max-md:mt-10 max-md:max-w-full">_</p>
-        <h3 className="self-end mt-96 text-center max-md:mt-10">Environment Score :</h3>
-        <h3 className="self-end mt-24 mr-9 text-5xl tracking-tighter leading-10 text-center max-md:mt-10 max-md:mr-2.5 max-md:text-4xl">CREDITS :</h3>
-      </section>
-      
-      <footer className="flex flex-col self-start mt-24 ml-28 text-5xl font-bold tracking-tighter leading-10 text-purple-400 max-md:mt-10 max-md:max-w-full">
-        <h3 className="text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:max-w-full max-md:text-4xl">DEV TEAM :</h3>
-        <p className="mt-6 text-slate-400 max-md:max-w-full">Swathi Dinesh</p>
-        <p className="mt-9 max-md:max-w-full">Richard B Melath</p>
-        <p className="mt-9 max-md:max-w-full">Neil Joseph</p>
-        <p className="mt-5 max-md:max-w-full">Aaquib Hanan</p>
-        <h3 className="mt-24 text-5xl tracking-tighter leading-10 text-purple-900 max-md:mt-10 max-md:max-w-full max-md:text-4xl">Support :</h3>
-        <p className="mt-6 max-md:max-w-full">IBM Watsonx</p>
-        <p className="mt-7 max-md:max-w-full">Adi Shankara College</p>
-        <p className="mt-5 max-md:max-w-full">IBM Kochi</p>
-      </footer>
-    </main>
-  );
-}
-
-export default MyComponent;
+        <div class="flex flex-col ml-5 w-[22%] max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col grow mt-5 text-2xl leading-10 text-purple-900 whitespace-nowrap max-md:mt-10">
+            <button type="submit" class="flex flex-col justify-center p-1.5 border-purple-900 border-solid border-[5px] rounded-[100px]">
+              <span class="justify-center py-11 pr-16 pl-16 bg-gray-300 rounded-[100px] max-md:pr-5 max-md:pl-6">ANALYSE</span>
+            </button>
+            <button type="button" class="flex flex-col justify-center p-1.5 mt-9 border-purple-900 border-solid border-[5px] rounded-[100px]">
+              <span class="justify-center items-center px-16 py-11 bg-gray-300 rounded-[100px] max-md:px-5">UPDATE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <h3 class="mt-14 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">Analysis :</h3>
+    <p class="self-start mt-12 ml-4 text-4xl italic font-light tracking-tighter leading-10 text-purple-800 max-md:mt-10 max-md:ml-2.5">_</p>
+    <h2 class="mt-72 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">PROJECT MANAGEMENT :</h2>
+    <section class="flex flex-col justify-center mt-14 text-white bg-purple-800 shadow-sm max-md:mt-10 max-md:max-w-full">
+      <div class="flex flex-col items-start pt-11 pr-20 pb-20 pl-9 bg-purple-800 shadow-sm max-md:px-5 max-md:max-w-full">
+        <h3 class="text-5xl font-bold tracking-tighter leading-10 text-center max-md:max-w-full">Project Idea Evaluation :</h3>
+        <p class="mt-6 text-4xl italic font-light tracking-tighter leading-10 max-md:max-w-full">Submit your project idea for a sustainability evaluation and receive tailored suggestions to enhance its value and efficiency.</p>
+      </div>
+    </section>
+    <section class="flex flex-col justify-center mt-12 text-white bg-purple-800 shadow-sm max-md:mt-10 max-md:max-w-full">
+      <div class="flex z-10 flex-col items-start pt-12 pr-20 pb-20 pl-9 mb-0 bg-purple-800 shadow-sm max-md:px-5 max-md:mb-2.5 max-md:max-w-full">
+        <h3 class="text-5xl font-bold tracking-tighter leading-10 text-center max-md:max-w-full">Material Evaluation :</h3>
+        <p class="mt-7 mb-1 text-4xl italic font-light tracking-tighter leading-10 max-md:max-w-full">Input the materials intended for your project to analyze their environmental impacts and receive optimized suggestions for improving material choices.</p>
+      </div>
+    </section>
+    <button class="flex flex-col justify-center self-center p-1.5 mt-20 max-w-full text-4xl leading-10 text-purple-900 whitespace-nowrap border-purple-900 border-solid border-[5px] rounded-[100px] w-[363px] max-md:mt-10">
+      <span class="justify-center px-14 py-10 bg-gray-300 rounded-[100px] max-md:pr-6 max-md:pl-5">SUMMARIZE</span>
+    </button>
+    <h2 class="self-center mt-32 text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:mt-10 max-md:max-w-full">YOUR PROJECT SUMMARY</h2>
+  </section>
+  <section class="flex flex-col self-start mt-28 ml-14 text-5xl font-bold tracking-tighter leading-10 text-purple-900 max-md:mt-10 max-md:max-w-full">
+    <h3 class="text-center max-md:max-w-full">FINALIZED IDEA :</h3>
+    <p class="mt-16 text-purple-900 max-md:mt-10 max-md:max-w-full">_</p>
+    <h3 class="mt-80 text-center max-md:mt-10 max-md:max-w-full">FINALIZED MATERIALS :</h3>
+    <p class="mt-16 text-black max-md:mt-10 max-md:max-w-full">_</p>
+    <h4 class="self-end mt-96 text-center max-md:mt-10">Environment Score :</h4>
+    <h3 class="self-end mt-24 mr-9 text-5xl tracking-tighter leading-10 text-center max-md:mt-10 max-md:mr-2.5 max-md:text-4xl">CREDITS :</h3>
+  </section>
+  <footer class="flex flex-col self-start mt-24 ml-28 text-5xl font-bold tracking-tighter leading-10 text-purple-400 max-md:mt-10 max-md:max-w-full">
+    <h3 class="text-5xl tracking-tighter leading-10 text-center text-purple-900 max-md:max-w-full max-md:text-4xl">DEV TEAM :</h3>
+    <p class="mt-6 text-slate-400 max-md:max-w-full">Swathi Dinesh</p>
+    <p class="mt-9 max-md:max-w-full">Richard B Melath</p>
+    <p class="mt-9 max-md:max-w-full">Neil Joseph</p>
+    <p class="mt-5 max-md:max-w-full">Aaquib Hanan</p>
+    <h3 class="mt-24 text-5xl tracking-tighter leading-10 text-purple-900 max-md:mt-10 max-md:max-w-full max-md:text-4xl">Support :</h3>
+    <p class="mt-6 max-md:max-w-full">IBM Watsonx</p>
+    <p class="mt-7 max-md:max-w-full">Adi Shankara College</p>
+    <p class="mt-5 max-md:max-w-full">IBM Kochi</p>
+  </footer>
+</main>
